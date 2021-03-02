@@ -1,6 +1,7 @@
 body {
-  background-color: rgb(232, 246, 255);
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
   margin-top: 56px;
   display: flex;
   flex-direction: column;
@@ -12,7 +13,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: #428fbb;
+  background: white;
   height: 56px;
   /* padding-left: 15px; */
   display: flex;
@@ -22,7 +23,7 @@ body {
 
 #header span {
   font-size: 24px;
-  color: white;
+  color: black;
   padding-right: 15px;
 }
 
@@ -30,20 +31,38 @@ body {
   padding-left: 15px;
 }
 
+#createdBy {
+  display: inline-block;
+  margin-bottom: 22px;
+}
 
 #container {
-  background-color: #428fbb;
+  background-color: rgb(246, 243, 8);
   box-shadow: 2px 2px 5px#000;
   width: 50%;
   min-width: 700px;
   border-radius: 5px;
+  max-height: 450px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+#container::-webkit-scrollbar {
+  width: 12px;
+}
+#container::-webkit-scrollbar-track {
+  background: rgb(246, 243, 8);
+}
+#container::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 12px;
+  border: 2px solid rgb(246, 243, 8);
 }
 
 #inputContainer {
   display: flex;
   justify-content: center;
-  padding: 10px;
   margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 #toDoInput {
@@ -64,9 +83,10 @@ body {
   border-radius: 4px;
   cursor: pointer;
   height: 35px;
-  background: #0160A2;
-  color: #FFF;
-  font-size: 20px;
+  background: black;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 #toDoContainer {
@@ -84,6 +104,7 @@ body {
   justify-content: space-around;
   align-items: center;
   background: #fff;
+  color: black;
   margin-bottom: 10px;
   border-radius: 5px;
   font-size: 20px;
@@ -94,7 +115,7 @@ body {
   width: 90%;
 }
 .completeText {
-  color: lightgrey;
+  color: gray;
   text-decoration: line-through;
 }
 

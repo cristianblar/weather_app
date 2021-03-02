@@ -4,9 +4,11 @@
 ---
 1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
 
-	* Framework
-	* Preprocesador
-	* Responsive website
+	* Framework: son marcos de referencia (guías con estándares definidos) para trabajar una tecnología específica (CSS, JavaScript, etc) que facilitan el desarrollo de aplicaciones a través de lineamientos estandarizados y generales.
+
+	* Preprocesadores: son "lenguajes" nacidos a partir de otros lenguajes estándares como CSS y HTML que extienden el poder de dichos lenguajes estándares, haciéndolos más fácil de entender, escribir, mantener y re-usar, modularizando el código de forma lógica y sencilla (teniendo en cuenta que los lenguajes estándares no evolucionan a la misma velocidad). El código escrito con preprocesadores debe ser compilado al lenguaje estándar antes de poder ser usado (por ejemplo, .scss debe ser compilado a .css).
+
+	* Responsive website: es un sitio web cuyo contenido y estilos visuales se adaptan a la pantalla en la cual han sido abiertos y están siendo utilizados.
 
 
 2. Crear una Responsive Website según las siguientes indicaciones:
