@@ -14,13 +14,12 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "nodemon": "^2.0.2",
     "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.2",
     "prompt-sync": "^4.2.0"
   }
 }
