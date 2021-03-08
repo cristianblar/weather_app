@@ -3,26 +3,27 @@
     <meta charset="utf-8" />
     <title>Henry</title>
     <link rel="shortcut icon" href="./assets/todo-icon.png" type="image/png" />
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script type="text/javascript" src="./DOMhomework.js" defer></script>
   </head>
-  <body>
-    <div id="header">
+  <body class="font-sans bg-black text-white">
+    <div
+      id="header"
+      class="flex justify-between items-center px-4 py-2 bg-primaryYellow mb-10"
+    >
       <a href="https://www.soyhenry.com/" target="_blank"
         ><img src="./assets/henry.png"
       /></a>
-      <span>DOM Homework</span>
+      <span class="text-black text-lg font-bold">DOM Homework</span>
     </div>
-    <h1>To-Do App</h1>
-    <div>
-      <span id="createdBy">Aplicación creada por:</span>
-    </div>
-    <div id="container">
-      <div id="inputContainer">
-        <input type="text" id="toDoInput" placeholder="Descripción To-Do..." />
-        <button id="addButton" onclick="addToDo();">AGREGAR</button>
+    <h1 class="text-center text-5xl mb-10">To-Do App</h1>
+    <span id="createdBy" class="block text-center mb-10">Aplicación creada por:</span>
+    <div id="container" class="w-9/12 mx-auto text-center">
+      <div id="inputContainer" class="w-full box-border text-black flex justify-between">
+        <input class="w-8/12 h-12 rounded-lg px-4 font-semibold text-lg outline-none" type="text" id="toDoInput" placeholder="Descripción To-Do..." />
+        <button class="w-24 h-12 border-2 border-primaryYellow rounded-lg bg-primaryYellow font-bold" id="addButton" onclick="addToDo();">AGREGAR</button>
       </div>
-      <div id="toDoContainer"></div>
+      <div id="toDoContainer" class="flex justify-start w-full box-border text-black"></div>
     </div>
   </body>
 </html>

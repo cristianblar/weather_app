@@ -53,6 +53,19 @@ function buildToDo(toDo, index) {
   // Tu código acá:
   let toDoShell = document.createElement("div");
   toDoShell.className = "toDoShell";
+  let tailwindClasses = [
+    "w-8/12",
+    "h-12",
+    "rounded-lg",
+    "px-4",
+    "font-semibold",
+    "text-lg",
+    "text-left",
+    "bg-white",
+    "pt-3",
+    "mt-2"
+  ];
+  toDoShell.classList.add(...tailwindClasses);
 
   let toDoText = document.createElement("span");
   toDoText.id = index;
