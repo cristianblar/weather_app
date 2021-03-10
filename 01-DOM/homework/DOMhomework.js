@@ -53,19 +53,8 @@ function buildToDo(toDo, index) {
   // Tu código acá:
   let toDoShell = document.createElement("div");
   toDoShell.className = "toDoShell";
-  let tailwindClasses = [
-    "w-8/12",
-    "h-12",
-    "rounded-lg",
-    "px-4",
-    "font-semibold",
-    "text-lg",
-    "text-left",
-    "bg-white",
-    "pt-3",
-    "mt-2"
-  ];
-  toDoShell.classList.add(...tailwindClasses);
+  let tailwindClassesShell = ["w-full", "h-12", "mb-2"];
+  toDoShell.classList.add(...tailwindClassesShell);
 
   let toDoText = document.createElement("span");
   toDoText.id = index;
@@ -73,6 +62,21 @@ function buildToDo(toDo, index) {
   toDoText.innerHTML = toDo.description;
   toDoText.addEventListener("click", completeToDo);
   toDo.complete ? (toDoText.className = "completeText") : "";
+  let tailwindClassesSpan = [
+    "block",
+    "w-full",
+    "h-full",
+    "rounded-lg",
+    "px-4",
+    "font-semibold",
+    "text-lg",
+    "text-left",
+    "bg-white",
+    "text-lg",
+    "leading-10",
+    "pt-1"
+  ];
+  toDoText.classList.add(...tailwindClassesSpan);
 
   toDoShell.appendChild(toDoText);
 

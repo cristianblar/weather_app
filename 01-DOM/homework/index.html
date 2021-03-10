@@ -1,6 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Henry</title>
     <link rel="shortcut icon" href="./assets/todo-icon.png" type="image/png" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -14,16 +15,16 @@
       <a href="https://www.soyhenry.com/" target="_blank"
         ><img src="./assets/henry.png"
       /></a>
-      <span class="text-black text-lg font-bold">DOM Homework</span>
+      <span class="text-black text-lg font-bold text-center">DOM Homework</span>
     </div>
-    <h1 class="text-center text-5xl mb-10">To-Do App</h1>
+    <h1 class="text-center text-4xl mb-10">To-Do App</h1>
     <span id="createdBy" class="block text-center mb-10">Aplicación creada por:</span>
-    <div id="container" class="w-9/12 mx-auto text-center">
-      <div id="inputContainer" class="w-full box-border text-black flex justify-between">
-        <input class="w-8/12 h-12 rounded-lg px-4 font-semibold text-lg outline-none" type="text" id="toDoInput" placeholder="Descripción To-Do..." />
+    <div id="container" class="w-10/12 mx-auto text-center">
+      <div id="inputContainer" class="w-full box-border text-black flex flex-wrap justify-center mb-2">
+        <input class="w-full h-12 rounded-lg px-4 font-semibold text-lg outline-none mb-2" type="text" id="toDoInput" placeholder="Descripción To-Do..." />
         <button class="w-24 h-12 border-2 border-primaryYellow rounded-lg bg-primaryYellow font-bold" id="addButton" onclick="addToDo();">AGREGAR</button>
       </div>
-      <div id="toDoContainer" class="flex justify-start w-full box-border text-black"></div>
+      <div id="toDoContainer" class="h-auto w-full box-border text-black"></div>
     </div>
   </body>
 </html>
