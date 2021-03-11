@@ -1,19 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
+import busqueda from "./SearchBar.module.css";
 
-export default function SearchBar({onSearch}) {
-  const [city, setCity] = useState("");
+export default function SearchBar(props) {
+  // acá va tu código
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault();
-      onSearch(city);
-    }}>
+    <div>
       <input
+        className={busqueda.barra}
         type="text"
         placeholder="Ciudad..."
-        value={city}
-        onChange={e => setCity(e.target.value)}
+        id="buscar-ciudad"
       />
-      <input type="submit" value="Agregar" />
-    </form>
+      <button
+        className={busqueda.boton}
+        onClick={(e) => {
+          e.preventDefault();
+          let ciudad = document.getElementById("buscar-ciudad");
+          ciudad.value
+            ? props.onSearch(
+                ciudad.value
+                  .toLowerCase()
+                  .normalize("NFD")
+                  .replace(/[\u0300-\u036f]/g, "")
+              )
+            : alert("¡Debes escribir el nombre de una ciudad!");
+          ciudad.value = "";
+        }}
+      >
+        Agregar
+      </button>
+    </div>
   );
 }

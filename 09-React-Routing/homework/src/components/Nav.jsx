@@ -1,21 +1,43 @@
-import React from 'react';
-import Logo from '../img/logoHenry.png'
-import SearchBar from './SearchBar.jsx';
-import './Nav.css';
+import React from "react";
+import Logo from "../img/logoHenry.png";
+import SearchBar from "./SearchBar.jsx";
+import barra from "./Nav.module.css";
+import { NavLink } from "react-router-dom";
+import homeLogo from "../img/icons8-home.svg";
 
-
-function Nav({onSearch}) {
-  return (
-    <nav className="navbar navbar-dark bg-dark">
-        <span className="navbar-brand">
-          <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
-          Henry - Weather App
-        </span>
-        <SearchBar
-          onSearch={onSearch}
-        />
-    </nav>
-  );
+const homeIconStyle = {
+  backgroundImage: `url(${homeLogo})`,
 };
+
+function Nav({ onSearch }) {
+  return (
+    <div className={barra.navContainer}>
+      <div className={barra.navLeft}>
+        <img src={Logo} alt="Logo de Henry"></img>
+        <span>Henry - Weather App</span>
+      </div>
+      <div className={barra.linksContainer}>
+        <ul>
+          <li>
+            <NavLink exact to="/">
+              <span style={homeIconStyle}></span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              activeStyle={{ color: "#008383", fontWeight: "500" }}
+            >
+              Acerca de la app...
+            </NavLink>
+          </li>
+        </ul>
+      </div>
+      <div className={barra.navRight}>
+        <SearchBar onSearch={onSearch} />
+      </div>
+    </div>
+  );
+}
 
 export default Nav;
