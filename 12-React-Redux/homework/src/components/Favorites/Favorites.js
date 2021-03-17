@@ -1,23 +1,38 @@
-import React, { Component } from "react";
-// import { connect } from "react-redux";
-// import { removeArticle } from "../../actions/index";
-// import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Favorites.css';
 
-export class ConnectedList extends Component {
+export default class ConnectedList extends Component {
+  handleRemove(event, id) {
+    event.preventDefault();
+    this.props.removeMovieFavorite(id);
+  }
 
   render() {
     return (
       <div>
         <h2>Películas Favoritas</h2>
-        <ul>
-          {/* Aqui deberias poner tu lista de peliculas! */}
-        </ul>
+        {this.props.movies.length === 0 && (
+          <h4 className="noMovies-message">
+            ¡No has agregado películas favoritas aún!
+          </h4>
+        )}
+        <div className="list-container">
+          <ul>
+            {this.props.movies.length !== 0 &&
+              this.props.movies.map((movie) => {
+                return (
+                  <li key={movie.id}>
+                    <Link to={`/movie/${movie.id}`}>{movie.title}</Link>
+                    <button onClick={(e) => this.handleRemove(e, movie.id)}>
+                      X
+                    </button>
+                  </li>
+                );
+              })}
+          </ul>
+        </div>
       </div>
     );
   }
 }
-
-
-
-export default (ConnectedList);
