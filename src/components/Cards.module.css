@@ -1,6 +1,11 @@
 .cardsContainer {
-  height: auto;
+  background-image: url('https://res.cloudinary.com/cristianblar/image/upload/v1621975889/Portfolio/main_background_ozwrqs.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 70vh;
   padding: 8px;
+  padding-top: 24px;
   width: 100%;
 }
 
@@ -17,4 +22,10 @@
 .cardsContainer ul li {
   list-style: none;
   margin: 8px;
+}
+
+@media screen and (min-width: 700px) {
+  .cardsContainer {
+    min-height: 90vh;
+  }
 }

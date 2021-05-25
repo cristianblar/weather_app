@@ -2,7 +2,6 @@
   background-color: #226666;
   color: white;
   height: 80vh;
-  margin-top: -12px;
   padding-top: 12px;
   width: 100%;
 }
@@ -27,7 +26,7 @@
 
 @media screen and (min-width: 700px) {
   .detalles {
-    height: 90vh;
+    min-height: 90vh;
   }
 
   .detalles h4 {

@@ -1,9 +1,10 @@
-import React from "react";
-import Logo from "../img/logoHenry.png";
-import SearchBar from "./SearchBar.jsx";
-import barra from "./Nav.module.css";
-import { NavLink } from "react-router-dom";
-import homeLogo from "../img/icons8-home.svg";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+
+import Logo from '../img/WeatherLogo.png';
+import SearchBar from './SearchBar';
+import barra from './Nav.module.css';
+import homeLogo from '../img/icons8-home.svg';
 
 const homeIconStyle = {
   backgroundImage: `url(${homeLogo})`,
@@ -13,22 +14,22 @@ function Nav({ onSearch }) {
   return (
     <div className={barra.navContainer}>
       <div className={barra.navLeft}>
-        <img src={Logo} alt="Logo de Henry"></img>
-        <span>Henry - Weather App</span>
+        <img src={Logo} alt="Logo de Henry" width={40} height={40} />
+        <span>Weather App</span>
       </div>
       <div className={barra.linksContainer}>
         <ul>
           <li>
             <NavLink exact to="/">
-              <span style={homeIconStyle}></span>
+              <span style={homeIconStyle} />
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/about"
-              activeStyle={{ color: "#008383", fontWeight: "500" }}
+              activeStyle={{ color: '#008383', fontWeight: '500' }}
             >
-              Acerca de la app...
+              About the app...
             </NavLink>
           </li>
         </ul>

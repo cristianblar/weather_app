@@ -1,30 +1,31 @@
-import React from "react";
-import tarjeta from "./Card.module.css";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Card(props) {
+import tarjeta from './Card.module.css';
+
+export default function Card({ img, onClose, id, name, min, max }) {
   // acá va tu código
   return (
     <div className={tarjeta.tarjeta}>
-      <button className={tarjeta.boton} onClick={props.onClose}>
+      <button type="button" className={tarjeta.boton} onClick={onClose}>
         X
       </button>
-      <Link to={`/city/${props.id}`} className={tarjeta.enlace}>
-        <h4 className={tarjeta.titulo}>{props.name}</h4>
+      <Link to={`/city/${id}`} className={tarjeta.enlace}>
+        <h4 className={tarjeta.titulo}>{name}</h4>
       </Link>
       <div className={tarjeta.temperaturaContainer}>
         <div>
           <h6>Min</h6>
-          <p>{props.min}ºC</p>
+          <p>{min}ºC</p>
         </div>
         <div>
           <h6>Max</h6>
-          <p>{props.max}ºC</p>
+          <p>{max}ºC</p>
         </div>
       </div>
       <img
-        src={`http://openweathermap.org/img/wn/${props.img}@2x.png`}
-        alt="Ícono del clima"
+        src={`http://openweathermap.org/img/wn/${img}@2x.png`}
+        alt="Weather icon"
       />
     </div>
   );
